@@ -27,7 +27,7 @@ SECRET_KEY = 'ze*=z9&az_=svv#n67mmzy&6mk=16g0sjfn1#)t(xi=y#fctxb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tinasheprojectsapp.herokuapp.com']
+ALLOWED_HOSTS = ['tinasheprojectsapp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
