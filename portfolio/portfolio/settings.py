@@ -27,7 +27,7 @@ SECRET_KEY = 'ze*=z9&az_=svv#n67mmzy&6mk=16g0sjfn1#)t(xi=y#fctxb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tinasheprojectsapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['tinasheprojectsapp.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,16 +121,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+#PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIR = [
-    os.path.join(PROJECT_ROOT, 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 #Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
