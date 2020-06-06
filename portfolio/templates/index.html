@@ -9,8 +9,8 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="../media/img/favicon.ico" rel="icon">
-  <link href="../media/img/apple-touch-icon.png"  rel="apple-touch-icon">
+  <link href="{% static 'img/favicon.ico' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}"  rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}"  rel="stylesheet">
@@ -72,7 +72,7 @@
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(../media/img/matrix.jpg)">
+  <div id="home" class="intro route bg-image" style="background-image: url({% static 'img/matrix.jpg' %})">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -96,7 +96,7 @@
 
               <div class="col-md-6">
                 <p class="lead">
-                  <img src="{{ about.image.url }}" alt="Profile image" class="img-fluid">
+                  <img src="{{ about.image }}" alt="Profile image" class="img-fluid">
                 </p>
               </div>
               <div class="col-md-6">
@@ -143,7 +143,7 @@
           <div class="work-box">
             <a href="{{ work.image.url }}" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="{{ work.image.url }}" alt="" class="img-fluid">
+                <img src="{{ work.image }}" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">

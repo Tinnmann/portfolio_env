@@ -4,7 +4,7 @@ from django.db import models
 class About(models.Model):
     description = models.TextField()
     short_description = models.TextField()
-    image = models.ImageField(upload_to="about")
+    image = models.ImageField(upload_to="static/about")
 
     class Meta:
         verbose_name = "About Me"
@@ -24,7 +24,7 @@ class About(models.Model):
 #Recent work Model
 class RecentWork(models.Model):
     title = models.CharField(max_length = 100, verbose_name = "Work title")
-    image = models.ImageField(upload_to="works")
+    image = models.ImageField(upload_to="static/works")
 
     def __str__(self):
         return self.title
